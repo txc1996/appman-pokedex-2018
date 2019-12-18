@@ -109,6 +109,7 @@ class MyPokedek extends React.Component {
             onClick={() => this.setState({ openListPoke: true })}
           />
         </Styles.Footer>
+        
         <Popup
           open={this.state.openListPoke}
           onClose={() => this.setState({ openListPoke: false })}
