@@ -25,7 +25,7 @@ const Name = styles.h1`
 const Progress = styles.progress`
   -webkit-appearance: none;
   appearance: none;
-  width: 150px;
+  width: 35%;
   height: 25px;
   position: relative;
   margin-left: 60px;
@@ -50,14 +50,14 @@ const Progress = styles.progress`
   }
 `
 
-const CloseButton = styles.div`
+const Action = styles.div`
   position: absolute;
   right: 10px;
   top: 10px;
   &:before {
     display: ${(props) => props.display ? "block" : "none"};
     cursor: pointer;
-    content: "x";
+    content: "${(props) => props.actionTitle}";
     color: var(--Fire);
     font-size: 30px;
   }
@@ -69,5 +69,5 @@ export default {
   Info,
   Name,
   Progress,
-  CloseButton
+  Action
 }

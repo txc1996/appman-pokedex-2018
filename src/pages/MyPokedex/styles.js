@@ -1,5 +1,7 @@
 import styles from 'styled-components'
 
+import SearchPng from './../../search.png'
+
 const Container = styles.div`
   height: 718px;
   overflow: scroll;
@@ -26,6 +28,7 @@ const AddButton = styles.div`
   background-color: var(--Fire);
   color: var(--Colorless);
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
   :before {
     content: "+";
     position: absolute;
@@ -46,10 +49,29 @@ const ListCardContainer = styles.div`
   margin-bottom: 20px;
 `
 
+const PopupContainer = styles.div`
+  padding: 10px;
+  overflow: scroll;
+`
+
+const Search = styles.input`
+  background: url(${SearchPng});
+  background-repeat: no-repeat;
+  background-size: 30px 30px;
+  background-position: right;
+  width: 100%;
+  height: 30px;
+  &::placeholder {
+    font-family: 'Atma', cursive;
+  }
+`
+
 export default {
   Container,
   Header,
   Footer,
   AddButton,
-  ListCardContainer
+  ListCardContainer,
+  PopupContainer,
+  Search
 }

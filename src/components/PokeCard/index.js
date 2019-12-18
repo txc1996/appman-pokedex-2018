@@ -15,6 +15,7 @@ class PokeCard extends React.Component {
   render() {
     return (
       <Styles.Container 
+        style={this.props.style}
         onMouseOver={() => this.setState({ hover: true })}
         onMouseOut={() => this.setState({ hover: false })}
       >
@@ -26,7 +27,7 @@ class PokeCard extends React.Component {
           <Styles.Progress max="100" value="80" title="weak"></Styles.Progress>
           <Stars number="5"></Stars>
         </Styles.Info>
-        <Styles.CloseButton display={this.state.hover}></Styles.CloseButton>
+        <Styles.Action display={this.state.hover} actionTitle={this.props.actionTitle}></Styles.Action>
       </Styles.Container>
     )
   }
