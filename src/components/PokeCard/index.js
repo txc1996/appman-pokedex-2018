@@ -71,7 +71,7 @@ class PokeCard extends React.Component {
           </Stars>
         </Styles.Info>
         <Styles.Action 
-          display={this.state.hover}
+          display={this.state.hover.toString()}
           actionTitle={this.props.actionTitle}
           onClick={this.props.onAction}
         ></Styles.Action>

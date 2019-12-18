@@ -61,6 +61,7 @@ const Search = styles.input`
   background-position: right;
   width: 100%;
   height: 30px;
+  font-family: 'Atma', cursive;
   &::placeholder {
     font-family: 'Atma', cursive;
   }
