@@ -4,9 +4,20 @@ import Styles from './styles'
 import Stars from './../Stars'
 
 class PokeCard extends React.Component {
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      hover: false
+    }
+  }
+
   render() {
     return (
-      <Styles.Container>
+      <Styles.Container 
+        onMouseOver={() => this.setState({ hover: true })}
+        onMouseOut={() => this.setState({ hover: false })}
+      >
         <Styles.Image src="https://images.pokemontcg.io/ex8/98.png"></Styles.Image>
         <Styles.Info>
           <Styles.Name>deoxys ex</Styles.Name>
@@ -15,6 +26,7 @@ class PokeCard extends React.Component {
           <Styles.Progress max="100" value="80" title="weak"></Styles.Progress>
           <Stars number="5"></Stars>
         </Styles.Info>
+        <Styles.CloseButton display={this.state.hover}></Styles.CloseButton>
       </Styles.Container>
     )
   }

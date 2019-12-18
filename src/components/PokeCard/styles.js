@@ -5,6 +5,7 @@ const Container = styles.div`
   width: 450px;
   padding: 10px;
   background-color: var(--Metal);
+  position: relative;
 `
 
 const Image = styles.img`
@@ -14,6 +15,7 @@ const Image = styles.img`
 `
 
 const Info = styles.div`
+  position: relative;
 `
 
 const Name = styles.h1`
@@ -46,7 +48,19 @@ const Progress = styles.progress`
     left: -60px;
     text-transform: uppercase;
   }
-  
+`
+
+const CloseButton = styles.div`
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  &:before {
+    display: ${(props) => props.display ? "block" : "none"};
+    cursor: pointer;
+    content: "x";
+    color: var(--Fire);
+    font-size: 30px;
+  }
 `
 
 export default {
@@ -54,5 +68,6 @@ export default {
   Image,
   Info,
   Name,
-  Progress
+  Progress,
+  CloseButton
 }

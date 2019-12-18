@@ -13,7 +13,7 @@ class MyPokedek extends React.Component {
           <PokeCard></PokeCard>
         </Styles.ListCardContainer>
         <Styles.Footer>
-          <Styles.AddButton/>
+          <Styles.AddButton />
         </Styles.Footer>
       </Styles.Container>
     )
